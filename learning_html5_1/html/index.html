@@ -1,0 +1,48 @@
+<canvas id="ctx" width="500" height="500" style="border:1px solid #000000;"></canvas>
+ 
+<script>  
+var ctx = document.getElementById("ctx").getContext("2d");
+ctx.font = '30px Arial';
+ 
+var x = 50;
+var spdX = 30;
+var y = 40;
+var spdY = 5;
+ 
+setInterval(update,500); //  500ms repeat action
+ 
+function update(){
+        x += spdX;
+        y += spdY;
+        ctx.fillText('P',x,y);
+        console.log('hello',x);
+       
+        if(x > 500){
+                console.log('Out of Bounds'); // in google chrome debugger
+        }
+       
+}
+ 
+/*      Comment Section
+ 
+//1. Modify Settings =
+ctx.font = '30px Arial';        //Font used
+ctx.fillStyle = 'red';          //Color of the text and forms
+ctx.globalAlpha = 0.5;          //Transparency 0 = invisble, 1 = visible
+ 
+//2. Draw something ()
+ctx.fillText('Hello',50,50);    //Write text ... ctx.fillText('text',x,y);
+ctx.fillRect(50,50,100,100);            //Draw rectangle ... ctx.fillRect(startX,startY,width,height);
+ctx.clearRect(75,75,100,100);           //Clear Canvas ... ctx.fillRect(startX,startY,width,height);
+ 
+x += spdX;      same than       x = x +spdX
+ 
+Debugger:
+F12
+Breakpoint = Code stops when reaches this line if console is opened
+Console = Get the value of variable + Message with console.log('text');
+ 
+End of Comment Section */
+ 
+ 
+</script>
