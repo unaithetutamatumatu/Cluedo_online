@@ -1,2 +1,0 @@
-sudo docker stop docker-nginx
-sudo docker rm docker-nginx
